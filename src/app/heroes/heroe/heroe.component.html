@@ -1,17 +1,66 @@
-
-<form action="save" method="post">
+<form>
     <div>
         <div>
-            <label for="name">Name:</label>
-            <input type="text" name="name" id="name">
+            <h1>{{title}}</h1> <br><br>
+        </div><br><br>
+        <div>
+           <h2>{{nombre}}</h2>
         </div><br>
         <div>
-            <label for="email">Email:</label>
-            <input type="email" name="email" id="email">
+            <dl>
+                <ol>
+                    <li><dd>Primer Item</dd><br>
+                        <ul>
+                            <h6><dd>Apellido:</dd></h6>
+                            <ul><li>{{apellido}}</li></ul>
+                            <h6><dd>Edad:</dd></h6>
+                            <ul><li>{{edad}}</li></ul>
+                        </ul>
+                    </li><br>
+
+                    <li><dd>Segundo Item</dd>
+                        <ul>
+                            <h6><dd>Peliculas:</dd></h6>
+                            <ul>
+                                <li>{{peliculas.primera}}</li>
+                                <li>{{peliculas.segunda}}</li>
+                                <li>{{peliculas.tercera}}</li>
+                                <li>{{peliculas.cuarta}}</li>
+                            </ul>                      
+                        </ul>
+                    </li>
+                </ol>
+            </dl><br>
+
+
+            <dl>
+                <td>Nombre:</td>
+                <dd>{{nombre}}</dd>
+
+                <td>Edad:</td>
+                <dd>{{edad}}</dd>
+                
+                <td>Función:</td>
+                <dd>{{obtenerNombre()}}</dd>
+                
+                <td>Capitalizado:</td>
+                <dd>{{peliculas.primera.toUpperCase()}}</dd>
+                
+                <td>Pelicula Capitalizada:</td>
+                <dd>{{''}}</dd>
+            </dl>
         </div><br>
+
         <div>
-            <label for="nacimiento">Fecha Nacimiento:</label><br>
-            <input type="date" name="date" id="date">
+            <button type="button" (click)="cambiarNombre()"> Cambiar Heroe</button>
+            
+            <span> {{nombre}} </span>
+
+            <button type="button" (click)="cambiarEdad()"> Cambiar Edad</button>
+
+            <!-- <button (click)="edad = edad + 1">Add</button>
+            <span> {{edad}} </span>
+            <button (click)="edad = edad">Reset </button> -->
         </div>
     </div>
 </form>
