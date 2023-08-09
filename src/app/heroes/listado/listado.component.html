@@ -1,0 +1,44 @@
+<form>
+    <h1>Arreglo de Heroes</h1>
+    <div>
+        <dl>
+            <ol>
+                <li><dd>Primer Item</dd>
+                    <div>
+                        <ul *ngIf="heroeBorrado true">
+                            <h6>Heroe Borrado:<small>{{heroeBorrado}}</small></h6>
+                        </ul>
+                    </div><br>
+                    <div>
+                        <ul>
+                            <h6><dd>Heroes:</dd></h6>
+                            <ul>
+                                <li *ngFor="let heroe of heroes let i = index">{{i+1}} - {{heroe}}</li>
+                            </ul>
+                        </ul>
+                    </div>
+                    
+                </li><br>
+
+                <div>
+                    <button type="button" (click)="borrarHeroe()"> Borrar</button>                    
+                </div><br><br>
+    
+                <li><dd>Segundo Item</dd>
+                    <ul>
+                        <h6><dd>Heroes:</dd></h6>
+                        <!-- No es recomendable trabajar los arreglos de esta manera del lado del cliente -->
+                        <ul>
+                            <li>{{heroes[0]}}</li>
+                            <li>{{heroes[1]}}</li>
+                            <li>{{heroes[2]}}</li>
+                            <li>{{heroes[3]}}</li>
+                            <li>{{heroes[4]}}</li>
+                            <li>{{heroes[5]}}</li>
+                        </ul>                      
+                    </ul>
+                </li>
+            </ol>
+        </dl><br>
+    </div>
+</form>

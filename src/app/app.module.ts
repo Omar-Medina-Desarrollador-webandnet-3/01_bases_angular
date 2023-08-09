@@ -9,13 +9,15 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import {MatAutocompleteModule} from '@angular/material/autocomplete';
 import {MatButtonModule} from '@angular/material/button';
 import { HeroeComponent } from './heroes/heroe/heroe.component';
+import { ListadoComponent } from './heroes/listado/listado.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     ContadorComponent,
-    HeroeComponent
+    HeroeComponent,
+    ListadoComponent
   ],
   imports: [
     BrowserModule,
