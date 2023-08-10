@@ -5,10 +5,15 @@
             <ol>
                 <li><dd>Primer Item</dd>
                     <div>
-                        <ul *ngIf="heroeBorrado true">
-                            <h6>Heroe Borrado:<small>{{heroeBorrado}}</small></h6>
+                        <ul *ngIf="heroeBorrado; else noBorrado">
+                            <h5>Heroe Borrado:<small> {{ heroeBorrado }} </small></h5>
                         </ul>
                     </div><br>
+                    <ng-template #noBorrado> <!--Referencias locales, esto se hace del lado del template-->
+                        <ul>
+                            <h5>No ha borrado nada</h5>
+                        </ul>
+                    </ng-template>
                     <div>
                         <ul>
                             <h6><dd>Heroes:</dd></h6>
@@ -23,11 +28,12 @@
                 <div>
                     <button type="button" (click)="borrarHeroe()"> Borrar</button>                    
                 </div><br><br>
+            </ol>
     
-                <li><dd>Segundo Item</dd>
+                <!-- <li><dd>Segundo Item</dd>
                     <ul>
                         <h6><dd>Heroes:</dd></h6>
-                        <!-- No es recomendable trabajar los arreglos de esta manera del lado del cliente -->
+                        No es recomendable trabajar los arreglos de esta manera del lado del cliente
                         <ul>
                             <li>{{heroes[0]}}</li>
                             <li>{{heroes[1]}}</li>
@@ -37,8 +43,7 @@
                             <li>{{heroes[5]}}</li>
                         </ul>                      
                     </ul>
-                </li>
-            </ol>
+                </li> -->
         </dl><br>
     </div>
 </form>
