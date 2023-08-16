@@ -1,0 +1,14 @@
+.title {
+    text-align: center;
+}
+
+#btn {
+    width: 0px;
+    margin-left: 180px;
+    margin-right: 0px;
+}
+
+#btn button {
+    margin-left: 0px;
+    margin-right: 0px;
+}

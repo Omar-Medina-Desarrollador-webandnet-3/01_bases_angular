@@ -1,0 +1,8 @@
+<h3 class="title">Personajes</h3><hr>
+<ol>
+    <ul> 
+        <li *ngFor="let item of personajes"> 
+            {{item.nombre | uppercase}}&nbsp;-&nbsp;KIT:&nbsp;{{item.poder | number:'3.2-2' }} <!-- Pipes -->
+        </li>
+    </ul>
+</ol>

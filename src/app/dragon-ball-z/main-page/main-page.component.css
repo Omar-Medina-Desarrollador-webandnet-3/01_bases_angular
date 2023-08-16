@@ -1,0 +1,27 @@
+
+.title {
+    text-align: center;
+}
+
+.row {
+    display: flex;
+    margin-bottom: 100px;
+}
+
+.col {
+    border-color: rebeccapurple;
+    flex-grow: 1;
+}
+
+.col.one {
+    width: auto;
+}
+
+.col.two {
+    width: auto;
+}
+
+button {
+    border-color: rebeccapurple;
+    border-radius: 30px;
+}

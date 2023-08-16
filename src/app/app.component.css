@@ -10,13 +10,13 @@ html, body {
     -webkit-font-smoothing: antialiased;
     text-size-adjust: 40px;
 }
-
+/* 
 form {
     border-color: rebeccapurple;
     margin: 100px;
     color: #3e4144;
     border-radius: 30px;
-}
+} */
 
 dd {
     font-weight: bold;
