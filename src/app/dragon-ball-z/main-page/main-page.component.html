@@ -9,11 +9,13 @@
         </div><br>
 
         <div class="col one">
-            <app-personajes [data]="personajes"></app-personajes>
+            <app-personajes></app-personajes>
+            <!-- <app-personajes [data]="personajes"></app-personajes> -->
         </div>
         
         <div class="col two">
-            <app-agregar (onNuevoPersonaje)="agregarNuevo( $event )"></app-agregar>
+            <app-agregar></app-agregar>
+            <!-- <app-agregar (onNuevoPersonaje)="agregarNuevo( $event )"></app-agregar> -->
         </div>
         <hr>
     </div>
